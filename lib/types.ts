@@ -15,10 +15,5 @@ export type Product = {
   createdAt?: Date;
 };
 
-export type ProductPageProp = {
- 
- slug: string;
 
-   
-  };
 

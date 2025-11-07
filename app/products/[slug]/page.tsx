@@ -1,15 +1,16 @@
 
 import Price from "@/components/product/price";
 import ImageComponent from "@/components/product/ImageComponent";
-import { getProduct } from "@/lib/actions/product";
-import { ProductPageProp } from "@/lib/types";
+import { getProduct } from "@/lib/actions/product"
 import { notFound } from "next/navigation";
 
-export default async function ProductPage({params}:{params: ProductPageProp}) {
+export default async function ProductPage(props:{
+    params: Promise<{slug:string}>
+}) {
 
-
-   const res = await params;
-   const product = await getProduct(res.slug)
+     
+   const param = await props.params;
+   const product = await getProduct(param.slug)
 
    if(!product) return notFound()
 
