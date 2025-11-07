@@ -14,3 +14,11 @@ export type Product = {
   banner?: string;
   createdAt?: Date;
 };
+
+export type ProductPageProp = {
+ 
+ slug: string;
+
+   
+  };
+

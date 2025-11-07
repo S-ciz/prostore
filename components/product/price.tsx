@@ -4,7 +4,7 @@ export default function Price({ price }: { price: number }) {
 
   const [intValue, floatValue] = fixedPrice.toString().split(".");
   return (
-    <div className="flex">
+    <div className="flex text-center">
       <small>$ </small>
       <span> <h1 className="text-2xl">{intValue}</h1></span>
      <small>{Number(floatValue)}</small>
